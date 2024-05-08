@@ -14,13 +14,13 @@ in Python.
 4. [Chapter IV](#chapter-iv) \
     4.1. [Exercise 00 : Regularization](#exercise-00-regularization)
 5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 00 : Gridsearch](#exercise-00-gridsearch)
+    5.1. [Exercise 01 : Gridsearch](#exercise-01-gridsearch)
 6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 00 : Metrics](#exercise-00-metrics)
+    6.1. [Exercise 02 : Metrics](#exercise-02-metrics)
 7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 00 : Ensembles](#exercise-00-ensembles)
+    7.1. [Exercise 03 : Ensembles](#exercise-03-ensembles)
 8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 00 : Pipelines and OOP](#exercise-00-pipelines-and-oop)
+    8.1. [Exercise 04 : Pipelines and OOP](#exercise-04-pipelines-and-oop)
     
    
 ## Chapter I
@@ -137,13 +137,13 @@ What you need to do is fully described in [the notebook](https://drive.google.co
 
 ## Chapter V
 
-### Exercise 00 : Gridsearch
+### Exercise 01 : Gridsearch
 
-Exercise 00
+Exercise 01
 
 Gridsearch
 
-Turn-in directory : ex00/
+Turn-in directory : ex01/
 
 Files to turn in : gridsearch.ipynb
 
@@ -162,13 +162,13 @@ What you need to do describe in [the notebook](https://drive.google.com/file/d/1
 
 ## Chapter VI
 
-### Exercise 00 : Metrics
+### Exercise 02 : Metrics
 
-Exercise 00
+Exercise 02
 
 Metrics
 
-Turn-in directory : ex00/
+Turn-in directory : ex02/
 
 Files to turn in : metrics.ipynb
 
@@ -220,13 +220,13 @@ What you need to do is fully described in [the notebook](https://drive.google.co
 
 ## Chapter VII
 
-### Exercise 00 : Ensembles
+### Exercise 03 : Ensembles
 
-Exercise 00
+Exercise 03
 
 Ensembles
 
-Turn-in directory : ex00/
+Turn-in directory : ex03/
 
 Files to turn in : ensembles.ipynb
 
@@ -241,13 +241,13 @@ What you need to do is fully described in [the notebook](https://drive.google.co
 
 ## Chapter VIII
 
-### Exercise 00 : Pipelines and OOP
+### Exercise 04 : Pipelines and OOP
 
-Exercise 00
+Exercise 04
 
 Pipelines and OOP
 
-Turn-in directory : ex00/
+Turn-in directory : ex04/
 
 Files to turn in : pipelines.ipynb
 
