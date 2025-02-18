@@ -1,8 +1,8 @@
 
 #!/bin/sh
 
-output_file=hh.json
-per_page=20
+output_file="/home/artem/s21/DS_Bootcamp.Day00-1/src/ex00/hh.json"
+per_page=50
 name=$1
 api_url="https://api.hh.ru/vacancies"
 
