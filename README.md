@@ -311,7 +311,7 @@ is quite important if you work with big data. Or maybe smaller-scale data can al
 you trouble? You have already got used to making experiments. Let us do yet another
 one.
 
-* Download the [MovieLens dataset](http://files.grouplens.org/datasets/movielens/ml-25m.zip).
+* Download the [MovieLens dataset](https://files.grouplens.org/datasets/movielens/ml-25m.zip).
 * Unzip it. You will need the file ratings.csv (678.3 MB is not that big, right?).
 * Create the first script, ordinary.py. It should have only one function: it reads all
 the file lines into a list and then returns it. In the main program, write a loop that
