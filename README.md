@@ -228,7 +228,7 @@ the content of the file data.csv. Save the script with the name first_constructo
 
 Example of launching the script:
 ```
-$ python3 first_class.py data.csv
+$ python3 first_constructor.py data.csv
 head,tail
 0,1
 1,0
