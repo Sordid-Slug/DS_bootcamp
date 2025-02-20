@@ -303,7 +303,7 @@ Turn-in directory : ex05/
 
 Files to turn in : ordinary.py, generator.py
 
-Allowed functions : import sys, import resource for Windows: import sys, import os, import
+Allowed functions : import sys, import resource; for Windows: import sys, import os, import
 psutil
 
 Code efficiency is not only about the time spent, but also about the RAM used. This
