@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def replace_comma(substr: str) -> None:
-    with open('/home/artem/s21/DS_Bootcamp.Day01-1/src/ex01/hh_sorted.csv', 'r') as file:
+    with open('hh_sorted.csv', 'r') as file:
         content = file.read()
 
     inside_quotes = False
@@ -20,7 +20,7 @@ def replace_comma(substr: str) -> None:
 
         modified_content.append("".join(new_line))
 
-    with open('/home/artem/s21/DS_Bootcamp.Day01-1/src/ex01/ds.tsv', 'w') as file:
+    with open('ds.tsv', 'w') as file:
         file.writelines(modified_content)
 
 

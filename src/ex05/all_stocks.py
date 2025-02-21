@@ -3,16 +3,18 @@
 import sys
 
 def all_stocks() -> None:
-    if len(sys.argv) < 2:
+    if len(sys.argv) != 2:
         return
     
     request = sys.argv[1].split(',')
-    request = [word.strip() for word in request if word.strip()]
-
+    request = [word.strip() for word in request]
+    if '' in request:
+        return
+    
     COMPANIES = {
         'Apple': 'AAPL',
         'Microsoft': 'MSFT',
-        'Netflix': 'NFLX',
+        'Netflix': 'TSLA',
         'Tesla': 'TSLA',
         'Nokia': 'NOK'
     }
@@ -26,13 +28,12 @@ def all_stocks() -> None:
     }
 
     for name in request:
-        name = name[0].upper() + name[1:].lower()
+        name = name.title()
         
-        if name in COMPANIES.keys():
-            ticker_symbol = COMPANIES[name]
-            stock = STOCKS[ticker_symbol]
+        if name in COMPANIES:
+            stock = STOCKS[COMPANIES[name]]
             print(f"'{name}' stock price is {stock}")
-        elif name.upper() in STOCKS.keys():
+        elif name.upper() in STOCKS:
             ticker_symbol = name.upper()
             companies = [key for key, val in COMPANIES.items() if val == ticker_symbol]
             companies = ", ".join(companies)
