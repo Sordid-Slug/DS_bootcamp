@@ -32,11 +32,9 @@ Summary: Today we will help you acquire skills with Pandas.
 
 Fun facts about pandas:
 
-* Pandas are big eaters – every day they fill their tummies for up to 12 hours, con-
-suming up to 12 kilograms of bamboo
+* Pandas are big eaters – every day they fill their tummies for up to 12 hours, consuming up to 12 kilograms of bamboo
 * Unlike most other bears, pandas do not hibernate. When winter approaches, they
-head lower down their mountain homes to warmer temperatures, where they con-
-tinue to chomp away on bamboo
+head lower down their mountain homes to warmer temperatures, where they continue to chomp away on bamboo
 * Sadly, these beautiful bears are endangered, and it’s estimated that only around
 1,000 remain in the wild
 * On average, pandas poo 40 times a day
@@ -80,8 +78,7 @@ precalculated output instead of performing the exercise correctly.
 on the left.
 * Your reference material: peers / Internet / Google.
 * You can ask questions in Slack.
-* Read the examples carefully. They may require things that are not otherwise spec-
-ified in the subject.
+* Read the examples carefully. They may require things that are not otherwise specified in the subject.
 * And may the Force be with you!
 
 ## Chapter III
@@ -91,8 +88,7 @@ ified in the subject.
 * Use Jupyter Notebook to work with your code
 * For each major subtask in the list of any exercise (black bullets), your ipynb file
 should have an h2 heading to help your peer easily navigate in your code
-* No imports are allowed, except those explicitly mentioned in the “Authorized func-
-tions” section of the title block of each exercise
+* No imports are allowed, except those explicitly mentioned in the “Authorized functions” section of the title block of each exercise
 * You can use any built-in function, if it is not prohibited in the exercise
 * Save and load all the required data in the subfolder data/
 
@@ -192,8 +188,7 @@ views.log
   * you need to assign the particular time of day value if an hour is within a
   particular interval, for example, afternoon if the hour is larger than 11 and
   less or equal to 17
-  * 0 – 3.59 night, 4 – 6.59 early morning, 7 – 10.59 morning, 11
-  – 16.59 afternoon, 17 – 19.59 early evening, 20 – 23.59 evening
+  * 0 – 3.59 night, 4 – 6.59 early morning, 7 – 10.59 morning, 11 – 16.59 afternoon, 17 – 19.59 early evening, 20 – 23.59 evening
   * use the method cut to solve this subtask
   * assign the column user as the index
 * calculate the number of elements in your dataframe
@@ -339,13 +334,11 @@ enrich our initial dataset.
 * enrich the dataframe using a sample from that dataframe
   * create a sample with 200 new observations with random_state = 21 
     * the sample should not have new combinations of the car number,
-    make
-    and model, so the whole dataset will be consistent in these terms
+    make and model, so the whole dataset will be consistent in these terms
     * there are no restrictions on the refund and fines, you can take
     any value
     from these columns at random and use it towards any car number
-  * concatenate the sample with the initial dataframe to a new dataframe con-
-    cat_rows
+  * concatenate the sample with the initial dataframe to a new dataframe concat_rows
 * enrich the dataframe concat_rows by a new column with the data generated 
   * create a series with the name Year using random integers from 1980 to 2019
   * use np.random.seed(21) before generating the years
@@ -354,8 +347,7 @@ enrich our initial dataset.
   * create a new dataframe with the car numbers and their owners
       * get the most popular surnames (**you can find the file [surname.json](datasets/surname.json) in the attachments**) in the US
       * create a new series with the surnames (they should not have
-      special char-
-      acters like commas, brackets, etc.) from the data you gathered, the count
+      special characters like commas, brackets, etc.) from the data you gathered, the count
       should be equal to the number of unique car numbers using the sample
       (use random_state = 21)
       * create the dataframe owners with 2 columns: CarNumber and
@@ -406,8 +398,7 @@ about.
 each row and create a new column with the calculated data and measure the time
 using the magic command %%timeit in the cell
   * loop: write a function that iterates through the dataframe using for i in
-  range(0, len(df)), iloc and append() to a list, assign the result of the func-
-  tion to a new column in the dataframe
+  range(0, len(df)), iloc and append() to a list, assign the result of the function to a new column in the dataframe
   * do it using iterrows()
   * do it using apply() and lambda function
   * do it using Series objects from the dataframe
@@ -417,6 +408,5 @@ using the magic command %%timeit in the cell
   * set the index in your dataframe with CarNumber
   * again, get a row for the same CarNumber
 * downcasting:
-  * run df.info(memory_usage=’deep’), pay attention to the Dtype and the mem-
-  ory usage
+  * run df.info(memory_usage=’deep’), pay attention to the Dtype and the memory usage
   * make a copy() of your initial dataframe into another dataframe optimized
