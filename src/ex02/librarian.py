@@ -52,9 +52,9 @@ if __name__ == '__main__':
 
         librarian.display_installed_libraires()
 
-        librarian.save_requirements()
+        # librarian.save_requirements()
 
-        librarian.archive_env()
+        # librarian.archive_env()
     except subprocess.CalledProcessError as e:
         print(f'Error while installing packages: {e}')
     except Exception as e:
