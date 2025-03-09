@@ -18,7 +18,7 @@ if __name__ == "__main__":
     emails = ['john@gmail.com', 'james@gmail.com', 'alice@yahoo.com',
               'anna@live.com', 'philipp@gmail.com'] * 5
     
-    n = 9000_000
+    n = 9_000_000
     time_loop = timeit.timeit(lambda: loop_approach(emails), number = n)
     time_compr = timeit.timeit(lambda: comprehension_approach(emails), number = n)
 
