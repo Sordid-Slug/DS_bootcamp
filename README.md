@@ -73,8 +73,7 @@ precalculated output instead of performing the exercise correctly.
 on the left.
 * Your reference material: mates / Internet / Google.
 * You can ask questions in Slack.
-* Read the examples carefully. They may require things that are not otherwise spec-
-ified in the subject.
+* Read the examples carefully. They may require things that are not otherwise specified in the subject.
 * And may the Force be with you!
 
 ## Chapter III
@@ -84,8 +83,7 @@ ified in the subject.
 * Use Jupyter Notebook to work with your code
 * For each major subtask in the list of any exercise (black bullets), your ipynb file
 should have an h2 heading to help your peer easily navigate within your code
-* No imports are allowed, except for those explicitly mentioned in the section “Au-
-thorized functions” of the title block of each exercise
+* No imports are allowed, except for those explicitly mentioned in the section “Authorized functions” of the title block of each exercise
 * You can use any built-in function as long as it is not prohibited in the exercise
 * Save and load all the required data to the subfolder data/
 * scikit-learn (0.23.1) is the library that you need for all the machine learning tasks.
