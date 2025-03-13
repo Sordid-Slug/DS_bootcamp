@@ -38,8 +38,7 @@ the difference between them?
 intelligence includes any techniques that mimic human cognitive behavior. It can
 use machine learning algorithms in order to do this, or any other techniques like
 just writing a program with many “if-then-else” rules.
-* Machine learning includes statistical algorithms that automate the process of cre-
-ating the rules. The machine can find correlations and use them for different tasks
+* Machine learning includes statistical algorithms that automate the process of creating the rules. The machine can find correlations and use them for different tasks
 by “looking” at the data.
 * Neural nets are a subset of machine learning algorithms. They were created through
 the inspiration of how the human brain works (but they are still a far cry away from
@@ -72,8 +71,7 @@ precalculated output instead of performing the exercise correctly.
 on the left.
 * Your reference material: peers / Internet / Google.
 * You can ask questions in Slack.
-* Read the examples carefully. They may require things that are not otherwise spec-
-ified in the subject.
+* Read the examples carefully. They may require things that are not otherwise specified in the subject.
 * And may the Force be with you!
 
 ## Chapter III
@@ -83,8 +81,7 @@ ified in the subject.
 * Use Jupyter Notebook to work with your code
 * For each major subtask in the list of any exercise (black bullets), your ipynb file
 should have an h2 heading to help your peer easily navigate within your code
-* No imports are allowed, except those explicitly mentioned in the section “Autho-
-rized functions” of the title block of each exercise
+* No imports are allowed, except those explicitly mentioned in the section “Authorized functions” of the title block of each exercise
 * You can use any built-in function, as long as it is not prohibited in the exercise
 * Save and load all the required data to the subfolder data/
 * scikit-learn (0.23.1) is the library that you need for all the machine learning tasks.
@@ -123,8 +120,7 @@ can divide your users into 6 groups. And for each of these groups create a speci
 a recommendation. Do not confuse this with classification. You are not trying to predict
 anything. You are just looking at your data.
 
-Besides clustering algorithms, unsupervised learning includes dimensionality reduc-
-tion algorithms. They help you to reduce the number of features or observations. It may
+Besides clustering algorithms, unsupervised learning includes dimensionality reduction algorithms. They help you to reduce the number of features or observations. It may
 be helpful if you have a lot of them, but you do not have sufficient resources. Also, they
 may help you to find some latent features and improve the quality of your algorithms in
 supervised learning.
