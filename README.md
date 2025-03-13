@@ -79,8 +79,7 @@ precalculated output instead of performing the exercise correctly.
 on the left.
 * Your reference material: peers / Internet / Google.
 * You can ask questions in Slack.
-* Read the examples carefully. They may require things that are not otherwise spec-
-ified in the subject.
+* Read the examples carefully. They may require things that are not otherwise specified in the subject.
 * And may the Force be with you!
 
 ## Chapter III
@@ -335,8 +334,7 @@ number of commits
 color palette
 * the size of the dots should be 200
 * the width of the lines of the diagonal graphs (kde) should be 3
-* at the end of your Jupyter Notebook, create a markdown cell and insert the ques-
-tions:
+* at the end of your Jupyter Notebook, create a markdown cell and insert the questions:
   * “Can we say that if a user has a low number of pageviews then they likely
 have a low number of commits?” The answer: yes or no. 
   * “Can we say that if a user has a low number of pageviews then they likely have
