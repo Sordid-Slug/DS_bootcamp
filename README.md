@@ -170,7 +170,7 @@ Decision boundaries
 
 Turn-in directory : ex01/
 
-Files to turn in : 01_binary_decision_boundaries.ipynb
+Files to turn in : 01_binary_classifier_svm_tree.ipynb
 
 Allowed functions : no restrictions
 
