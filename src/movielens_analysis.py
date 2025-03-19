@@ -4,22 +4,12 @@ import re
 import time
 
 
-def gen_row(path_to_the_file):
-    with open(path_to_the_file, 'r') as file:
-        file.readline()
-        for row in file:
-            yield row
-
-
-try:
-    s = gen_row('')
-    while True:
-        try:
-            f = next(s)
-        except GeneratorExit:
-            break
-except FileNotFoundError:
-    pass
+# try:
+#     s = gen_row('')
+#     while True:
+#         f = next(s)
+# except FileNotFoundError:
+#     pass
 
 
 class Links:
@@ -29,6 +19,14 @@ class Links:
 
     def __init__(self, path_to_the_file):
         self.path_to_the_file = path_to_the_file
+        self.headers = {"User-Agent": "Mozilla/5.0"}
+        self.url = 'https://www.imdb.com/title/tt{0}/'
+
+    def gen_row(path_to_the_file):
+        with open(path_to_the_file, 'r') as file:
+            file.readline()
+            for row in file:
+                yield row.split(',')
 
     def get_imdb(list_of_movies, list_of_fields):
         """
@@ -41,41 +39,80 @@ class Links:
         headers = {"User-Agent": "Mozilla/5.0"}
 
         url = 'https://www.imdb.com/title/tt{0}/'
-        list_of_movieId = [1]  # <- list_of_movies
-        for movieId in list_of_movieId:
+        list_row_id = []
+        for i in Links.gen_row("links.csv"):
+            if i[0] in list_of_movies:
+                list_row_id.append(i)
+        for row_id in list_row_id:
             time.sleep(0.001)
-            response = requests.get(url, headers=headers)
+            response = requests.get(url.format(row_id[1]), headers=headers)
             if response.status_code != 200:
-                raise "Wrong title name!"
-            html = response.text
-            soup = BeautifulSoup(html, 'html.parser')
-            colums = soup.find_all(
-                "li", class_="ipc-metadata-list__item ipc-metadata-list__item--align-end")
-            cleaned_text = [re.findall(r">([^<]+)<", str(string))
-                            for string in colums]
-            dict_data = {data[0]: ' '.join(data[1:]) for data in cleaned_text}
+                raise requests.exceptions.ConnectionError
+            soup = BeautifulSoup(response.text, 'html.parser')
             result = []
-            result.append(movieId)
+            result.append(list_row_id[0])
             for field in list_of_fields:
-                if field in dict_data:
-                    result.append(dict_data[field])
+                span_label = soup.find('span', text=field)
+                a_label = soup.find('a', string=field)
+                if span_label:
+                    result.append(span_label.find_next("a").text)
+                elif a_label:
+                    result.append(a_label.find_next("a").text)
                 else:
                     result.append(None)
+            imdb_info.append(result)
+        imdb_info.sort(key=lambda x: x[0], reverse=True)
         return imdb_info
 
     def top_directors(self, n):
         """
-        The method returns a dict with top-n directors where the keys are directors and 
+        The method returns a dict with top-n directors where the keys are directors and
         the values are numbers of movies created by them. Sort it by numbers descendingly.
         """
-        return directors
+        dict_all_directors = {}
+        for row_id in Links.gen_row("links.csv"):
+            time.sleep(0.001)
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+            soup = BeautifulSoup(response.text, 'html.parser')
+            span_label = soup.find('span', text="Director")
+            if span_label:
+                name = span_label.find_next("a").text
+                if name in dict_all_directors:
+                    dict_all_directors[name] += 1
+                else:
+                    dict_all_directors[name] = 1
+        return dict(sorted(dict_all_directors.items(), key=lambda item: item[1], reverse=True)[:n])
 
     def most_expensive(self, n):
         """
         The method returns a dict with top-n movies where the keys are movie titles and
         the values are their budgets. Sort it by budgets descendingly.
         """
-        return budgets
+        dict_all_movies = {}
+        for row_id in Links.gen_row("links.csv"):
+            time.sleep(0.001)
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+            movie = soup.find('span', class_="hero__primary-text").text
+            budget = soup.find('span', string="Budget").find_next("span").text
+            dict_all_movies[movie] = int(
+                ''.join(budget[1:].split()[0].split(",")))
+        return dict(sorted(dict_all_movies.items(), key=lambda item: item[1], reverse=True)[:n])
 
     def most_profitable(self, n):
         """
@@ -83,7 +120,29 @@ class Links:
         the values are the difference between cumulative worldwide gross and budget.
      Sort it by the difference descendingly.
         """
-        return profits
+        dict_all_movies = {}
+        for row_id in Links.gen_row("links.csv"):
+            time.sleep(0.001)
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+            movie = soup.find('span', class_="hero__primary-text").text
+            budget = soup.find('span', string="Budget").find_next("span").text
+            gross = soup.find(
+                'span',
+                string="Gross worldwide"
+            ).find_next("span").text
+
+            dict_all_movies[movie] = int(''.join(gross[1:].split(","))) - \
+                int(''.join(budget[1:].split()[0].split(",")))
+        return dict(sorted(dict_all_movies.items(), key=lambda item: item[1], reverse=True)[:n])
 
     def longest(self, n):
         """
@@ -91,7 +150,28 @@ class Links:
         the values are their runtime. If there are more than one version – choose any.
      Sort it by runtime descendingly.
         """
-        return runtimes
+        dict_all_movies = {}
+        for row_id in Links.gen_row("links.csv"):
+            time.sleep(0.001)
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+            movie = soup.find('span', class_="hero__primary-text").text
+            time_transfer = {"hour": 60, "minutes": 1}
+            runtime = soup.find(
+                'span', string="Runtime").find_next("div").text.split()
+            runtime = sum([time_transfer[runtime[i * 2 + 1]] * int(runtime[i * 2])
+                           for i in range(len(runtime) // 2)])
+
+            dict_all_movies[movie] = runtime
+        return dict(sorted(dict_all_movies.items(), key=lambda item: item[1], reverse=True)[:n])
 
     def top_cost_per_minute(self, n):
         """
@@ -99,7 +179,29 @@ class Links:
 the values are the budgets divided by their runtime. The budgets can be in different currencies – do not pay attention to it. 
      The values should be rounded to 2 decimals. Sort it by the division descendingly.
         """
-        return costs
+        dict_all_movies = {}
+        for row_id in Links.gen_row("links.csv"):
+            time.sleep(0.001)
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+            response = requests.get(self.url.format(
+                row_id[1]), headers=self.headers)
+            if response.status_code != 200:
+                raise requests.exceptions.ConnectionError
+
+            soup = BeautifulSoup(response.text, 'html.parser')
+            movie = soup.find('span', class_="hero__primary-text").text
+            time_transfer = {"hour": 60, "minutes": 1}
+            runtime = soup.find(
+                'span', string="Runtime").find_next("div").text.split()
+            runtime = sum([time_transfer[runtime[i * 2 + 1]] * int(runtime[i * 2])
+                           for i in range(len(runtime) // 2)])
+            budget = soup.find('span', string="Budget").find_next("span").text
+            budget = int(''.join(budget[1:].split()[0].split(",")))
+            dict_all_movies[movie] = round(budget / runtime, 2)
+        return dict(sorted(dict_all_movies.items(), key=lambda item: item[1], reverse=True)[:n])
 
 
 class Movies:
