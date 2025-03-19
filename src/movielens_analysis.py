@@ -76,10 +76,6 @@ class Links:
                 row_id[1]), headers=self.headers)
             if response.status_code != 200:
                 raise requests.exceptions.ConnectionError
-            response = requests.get(self.url.format(
-                row_id[1]), headers=self.headers)
-            if response.status_code != 200:
-                raise requests.exceptions.ConnectionError
             soup = BeautifulSoup(response.text, 'html.parser')
             span_label = soup.find('span', text="Director")
             if span_label:
@@ -102,10 +98,6 @@ class Links:
                 row_id[1]), headers=self.headers)
             if response.status_code != 200:
                 raise requests.exceptions.ConnectionError
-            response = requests.get(self.url.format(
-                row_id[1]), headers=self.headers)
-            if response.status_code != 200:
-                raise requests.exceptions.ConnectionError
 
             soup = BeautifulSoup(response.text, 'html.parser')
             movie = soup.find('span', class_="hero__primary-text").text
@@ -123,10 +115,6 @@ class Links:
         dict_all_movies = {}
         for row_id in Links.gen_row("links.csv"):
             time.sleep(0.001)
-            response = requests.get(self.url.format(
-                row_id[1]), headers=self.headers)
-            if response.status_code != 200:
-                raise requests.exceptions.ConnectionError
             response = requests.get(self.url.format(
                 row_id[1]), headers=self.headers)
             if response.status_code != 200:
@@ -157,10 +145,6 @@ class Links:
                 row_id[1]), headers=self.headers)
             if response.status_code != 200:
                 raise requests.exceptions.ConnectionError
-            response = requests.get(self.url.format(
-                row_id[1]), headers=self.headers)
-            if response.status_code != 200:
-                raise requests.exceptions.ConnectionError
 
             soup = BeautifulSoup(response.text, 'html.parser')
             movie = soup.find('span', class_="hero__primary-text").text
@@ -182,10 +166,6 @@ the values are the budgets divided by their runtime. The budgets can be in diffe
         dict_all_movies = {}
         for row_id in Links.gen_row("links.csv"):
             time.sleep(0.001)
-            response = requests.get(self.url.format(
-                row_id[1]), headers=self.headers)
-            if response.status_code != 200:
-                raise requests.exceptions.ConnectionError
             response = requests.get(self.url.format(
                 row_id[1]), headers=self.headers)
             if response.status_code != 200:
