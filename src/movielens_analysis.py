@@ -1,20 +1,66 @@
+import requests
+from bs4 import BeautifulSoup
+import re
+import time
+
+
+def gen_row(path_to_the_file):
+    with open(path_to_the_file, 'r') as file:
+        file.readline()
+        for row in file:
+            yield row
+
+
+try:
+    s = gen_row('')
+    while True:
+        try:
+            f = next(s)
+        except GeneratorExit:
+            break
+except FileNotFoundError:
+    pass
+
+
 class Links:
     """
     Analyzing data from links.csv
     """
 
     def __init__(self, path_to_the_file):
-        """
-        Put here any fields that you think you will need.
-        """
+        self.path_to_the_file = path_to_the_file
 
     def get_imdb(list_of_movies, list_of_fields):
         """
-The method returns a list of lists [movieId, field1, field2, field3, ...] for the list of movies given as the argument (movieId).
+        The method returns a list of lists [movieId, field1, field2, field3, ...] for the list of movies given as the argument (movieId).
         For example, [movieId, Director, Budget, Cumulative Worldwide Gross, Runtime].
         The values should be parsed from the IMDB webpages of the movies.
-     Sort it by movieId descendingly.
+        Sort it by movieId descendingly.
         """
+        imdb_info = []
+        headers = {"User-Agent": "Mozilla/5.0"}
+
+        url = 'https://www.imdb.com/title/tt{0}/'
+        list_of_movieId = [1]  # <- list_of_movies
+        for movieId in list_of_movieId:
+            time.sleep(0.001)
+            response = requests.get(url, headers=headers)
+            if response.status_code != 200:
+                raise "Wrong title name!"
+            html = response.text
+            soup = BeautifulSoup(html, 'html.parser')
+            colums = soup.find_all(
+                "li", class_="ipc-metadata-list__item ipc-metadata-list__item--align-end")
+            cleaned_text = [re.findall(r">([^<]+)<", str(string))
+                            for string in colums]
+            dict_data = {data[0]: ' '.join(data[1:]) for data in cleaned_text}
+            result = []
+            result.append(movieId)
+            for field in list_of_fields:
+                if field in dict_data:
+                    result.append(dict_data[field])
+                else:
+                    result.append(None)
         return imdb_info
 
     def top_directors(self, n):
@@ -195,3 +241,6 @@ class Tags:
         Drop the duplicates. It is a list of the tags. Sort it by tag names alphabetically.
         """
         return tags_with_word
+
+
+s = Links("links.csv")
