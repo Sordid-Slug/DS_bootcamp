@@ -111,13 +111,28 @@ class Movies:
         """
         Put here any fields that you think you will need.
         """
+        self.path_to_the_file = path_to_the_file
 
     def dist_by_release(self):
         """
         The method returns a dict or an OrderedDict where the keys are years and the values are counts. 
         You need to extract years from the titles. Sort it by counts descendingly.
         """
-        return release_years
+        try:
+            lines_in_file = gen_row(path_to_the_file)
+            dictYears = {}
+            for line in lines_in_file:
+                year = re.findall(r'\((\d{4})\)', str(line))
+                if year:
+                intYear = int(year[0])
+                if intYear in dictYears:
+                    dictYears[intYear] += 1
+                else: dictYears[intYear] = 1
+            release_years = dict(sorted(dictYears.items(), key=lambda item: item[1], reverse=True))
+            print(dictYears)
+            return release_years
+        except FileNotFoundError:
+            pass
 
     def dist_by_genres(self):
         """
