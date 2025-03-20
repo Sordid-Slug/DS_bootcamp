@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import time
-
+import pytest
 
 def gen_row(path_to_the_file):
     with open(path_to_the_file, 'r') as file:
@@ -42,7 +42,6 @@ class Movies:
                     dictYears[intYear] += 1
                 else: dictYears[intYear] = 1
             release_years = dict(sorted(dictYears.items(), key=lambda item: item[1], reverse=True))
-            print(dictYears)
             return release_years
         except FileNotFoundError:
             print("File not found!")
@@ -62,7 +61,6 @@ class Movies:
                         genres[genre] += 1
                     else: genres[genre] = 1
             genres = dict(sorted(genres.items(), key=lambda item: item[1], reverse=True))
-            print(genres)
             return genres
         except FileNotFoundError:
             print("File not found!")
@@ -81,15 +79,65 @@ class Movies:
                 genresList = re.findall(r',([^,\n]*)(?:\n)', str(line))[0].split('|')
                 movies[movieName] = len(genresList)
             movies = dict(sorted(movies.items(), key=lambda item: item[1], reverse=True)[:n])
-            print(movies)
             return movies
         except FileNotFoundError:
             print("File not found!")
 
-if __name__=='__main__':
-    moviesClass = Movies('movies.csv')
-    moviesClass.dist_by_release()
-    time.sleep(3)
-    moviesClass.dist_by_genres()
-    time.sleep(3)
-    moviesClass.most_genres(8)
+
+@pytest.fixture
+def MoviesClass():
+    return Movies('movies.csv')
+
+class TestMovies:
+
+    def test_correct_type_DBR(self, MoviesClass): ##DBR - dist_by_release
+        assert type(MoviesClass.dist_by_release()).__name__ == 'dict'
+
+    def test_correct_data_types_DBR(self, MoviesClass):
+        dict_check = MoviesClass.dist_by_release()
+        flag = True
+        for key, value in dict_check.items():
+            if not isinstance(key, int) or not isinstance(value, int):
+                flag = False
+        assert flag
+
+    def test_correct_sort_dict_DBR(self, MoviesClass):
+        dictCheck = MoviesClass.dist_by_release()
+        sortedList = sorted(dictCheck.items(), key=lambda item: item[1], reverse=True)
+        assert list(dictCheck.items()) == sortedList
+
+
+
+    def test_correct_type_DBG(self, MoviesClass): ##DBG - dist_by_genres
+        assert type(MoviesClass.dist_by_genres()).__name__ == 'dict'
+
+    def test_correct_data_types_DBG(self, MoviesClass):
+        dict_check = MoviesClass.dist_by_genres()
+        flag = True
+        for key, value in dict_check.items():
+            if not isinstance(key, str) or not isinstance(value, int):
+                flag = False
+        assert flag
+    
+    def test_correct_sort_dict_DBG(self, MoviesClass):
+        dictCheck = MoviesClass.dist_by_genres()
+        sortedList = sorted(dictCheck.items(), key=lambda item: item[1], reverse=True)
+        assert list(dictCheck.items()) == sortedList
+
+
+
+    def test_correct_type_MG(self, MoviesClass): ##MG- most_genres
+        assert type(MoviesClass.most_genres(8)).__name__ == 'dict'
+
+    def test_correct_data_types_MG(self, MoviesClass):
+        dict_check = MoviesClass.most_genres(8)
+        flag = True
+        for key, value in dict_check.items():
+            if not isinstance(key, str) or not isinstance(value, int):
+                flag = False
+        assert flag
+    
+    def test_correct_sort_dict_MG(self, MoviesClass):
+        dictCheck =  MoviesClass.most_genres(8)
+        sortedList = sorted(dictCheck.items(), key=lambda item: item[1], reverse=True)
+        assert list(dictCheck.items()) == sortedList
