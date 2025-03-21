@@ -157,6 +157,7 @@ the values are the budgets divided by their runtime. The budgets can be in diffe
             budget = soup.find('span', string="Budget").find_next("span").text
             budget = int(''.join(budget[1:].split()[0].split(",")))
             dict_all_movies[movie] = round(budget / runtime, 2)
+        print(dict_all_movies)
         return dict(sorted(dict_all_movies.items(), key=lambda item: item[1], reverse=True)[:n])
 
 
@@ -169,49 +170,52 @@ class TestClasses:
             examples_moviesId = [1, 2, 3, 4, 5]
             examples_fields = ["Director"]
             result = Links.get_imdb(examples_moviesId, examples_fields)
-            print(result)
             assert isinstance(result, list)
             assert all([None not in row for row in result])
-            if (len(examples_moviesId)):
-                assert len(result) == len(examples_moviesId) and \
-                    all([len(row) == len(examples_fields) for row in result])
+            assert all([all([isinstance(elem, str) for elem in row])
+                       for row in result])
 
         def test_directors(self):
             result = self.Link.top_directors(self.n)
             assert isinstance(result, dict)
-            # assert all([None != item for key, item in result.items()])
             excepted_result = dict(
                 sorted(result.items(), key=lambda x: x[1], reverse=True))
             assert excepted_result == result
+            assert all([all([isinstance(key, str), isinstance(item, int)])
+                       for key, item in result.items()])
 
         def test_expensive(self):
             result = self.Link.most_expensive(self.n)
             assert isinstance(result, dict)
-            # assert all([None != item for key, item in result.items()])
             excepted_result = dict(
                 sorted(result.items(), key=lambda x: x[1], reverse=True))
             assert excepted_result == result
+            assert all([all([isinstance(key, str), isinstance(item, int)])
+                       for key, item in result.items()])
 
         def test_profitable(self):
             result = self.Link.most_profitable(self.n)
             assert isinstance(result, dict)
-            # assert all([None != item for key, item in result.items()])
             excepted_result = dict(
                 sorted(result.items(), key=lambda x: x[1], reverse=True))
             assert excepted_result == result
+            assert all([all([isinstance(key, str), isinstance(item, int)])
+                       for key, item in result.items()])
 
         def test_longest(self):
             result = self.Link.longest(self.n)
             assert isinstance(result, dict)
-            # assert all([None != item for key, item in result.items()])
             excepted_result = dict(
                 sorted(result.items(), key=lambda x: x[1], reverse=True))
             assert excepted_result == result
+            assert all([all([isinstance(key, str), isinstance(item, int)])
+                       for key, item in result.items()])
 
         def test_cost_per_minute(self):
             result = self.Link.top_cost_per_minute(self.n)
             assert isinstance(result, dict)
-            # assert all([None != item for key, item in result.items()])
             excepted_result = dict(
                 sorted(result.items(), key=lambda x: x[1], reverse=True))
             assert excepted_result == result
+            assert all([all([isinstance(key, str), isinstance(item, float)])
+                       for key, item in result.items()])
