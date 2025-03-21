@@ -1,7 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
 import re
-import time
 import pytest
 
 def gen_row(path_to_the_file):
@@ -10,7 +7,7 @@ def gen_row(path_to_the_file):
         file.readline()
         for row in file:
             i += 1
-            if(i != 100):
+            if(i != 1000):
                 yield row
             else: return row
 
@@ -82,7 +79,6 @@ class Movies:
             return movies
         except FileNotFoundError:
             print("File not found!")
-
 
 @pytest.fixture
 def MoviesClass():
