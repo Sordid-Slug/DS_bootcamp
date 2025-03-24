@@ -187,7 +187,7 @@ class Ratings:
 
             return dict(sorted(user_by_metric.items(), key=lambda x: x[1], reverse=True))
         
-        def top_controversial(self, n):
+        def top_users_controversial(self, n):
             movie_ratings = defaultdict(list)
             for line in self.ratings_instance.iter_file():
                 user, _, rating, _ = line.split(",")
@@ -205,5 +205,5 @@ class Ratings:
     
 
 if __name__ == "__main__":
-    myex = Ratings("ratings.csv")
+    myex = Ratings("ml-latest-small/ratings.csv")
     print(myex.movies.top_by_num_of_ratings(5))
