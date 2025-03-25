@@ -3,6 +3,7 @@ from collections import defaultdict, Counter
 from bs4 import BeautifulSoup
 import requests
 import pytest
+import re
 import os
 
 
