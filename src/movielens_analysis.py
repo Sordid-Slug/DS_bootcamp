@@ -36,8 +36,8 @@ class Links:
                 raise requests.exceptions.ConnectionError
             limit -= 1
             yield BeautifulSoup(response.text, 'html.parser')
-
-    def get_imdb(list_of_movies, list_of_fields):
+    
+    def get_imdb(self, list_of_movies, list_of_fields):
         """
         The method returns a list of lists [movieId, field1, field2, field3, ...] for the list of movies given as the argument (movieId).
         For example, [movieId, Director, Budget, Cumulative Worldwide Gross, Runtime].
@@ -50,7 +50,7 @@ class Links:
         url = 'https://www.imdb.com/title/tt{0}/'
         list_row_id = []
         set_of_movies = set(list_of_movies)
-        for i in Links.__gen_row("links.csv"):
+        for i in Links.__gen_row("ml-latest-small/links.csv"):
             if int(i[0]) in set_of_movies:
                 list_row_id.append(i)
         for row_id in list_row_id:
@@ -612,20 +612,19 @@ def tags():
 
 
 @pytest.fixture
-def ratings():
-    return Ratings("ml-latest-small/ratings.csv")
-
-
-@pytest.fixture
 def movies():
     return Movies("ml-latest-small/movies.csv")
 
+
+@pytest.fixture
+def ratings():
+    return Ratings("ml-latest-small/ratings.csv")
 
 class TestClasses:
     class TestLinks:
         n = 10
 
-        def test_imdb(self):
+        def test_imdb(self, links):
             examples_moviesId = [1, 2, 3, 4, 5]
             examples_fields = ["Director"]
             result = links.get_imdb(examples_moviesId, examples_fields)
@@ -634,7 +633,7 @@ class TestClasses:
             assert all([all([isinstance(elem, str) for elem in row])
                        for row in result])
 
-        def test_directors(self):
+        def test_directors(self, links):
             result = links.top_directors(self.n)
             assert isinstance(result, dict)
             excepted_result = dict(
@@ -643,7 +642,7 @@ class TestClasses:
             assert all([all([isinstance(key, str), isinstance(item, int)])
                        for key, item in result.items()])
 
-        def test_expensive(self):
+        def test_expensive(self, links):
             result = links.most_expensive(self.n)
             assert isinstance(result, dict)
             excepted_result = dict(
@@ -652,7 +651,7 @@ class TestClasses:
             assert all([all([isinstance(key, str), isinstance(item, int)])
                        for key, item in result.items()])
 
-        def test_profitable(self):
+        def test_profitable(self, links):
             result = links.most_profitable(self.n)
             assert isinstance(result, dict)
             excepted_result = dict(
@@ -661,7 +660,7 @@ class TestClasses:
             assert all([all([isinstance(key, str), isinstance(item, int)])
                        for key, item in result.items()])
 
-        def test_longest(self):
+        def test_longest(self, links):
             result = links.longest(self.n)
             assert isinstance(result, dict)
             excepted_result = dict(
@@ -670,7 +669,7 @@ class TestClasses:
             assert all([all([isinstance(key, str), isinstance(item, int)])
                        for key, item in result.items()])
 
-        def test_cost_per_minute(self):
+        def test_cost_per_minute(self, links):
             result = links.top_cost_per_minute(self.n)
             assert isinstance(result, dict)
             excepted_result = dict(
@@ -681,10 +680,10 @@ class TestClasses:
 
     class TestTags:
 
-        def test_correct_type_MW(self):  # MW - most_words
+        def test_correct_type_MW(self, tags):  # MW - most_words
             assert type(tags.most_words(6)).__name__ == 'dict'
 
-        def test_correct_data_types_MV(self):
+        def test_correct_data_types_MV(self, tags):
             dict_check = tags.most_words(6)
             flag = True
             for key, value in dict_check.items():
@@ -692,16 +691,16 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_sort_dict_MV(self):
+        def test_correct_sort_dict_MV(self, tags):
             dictCheck = tags.most_words(6)
             sortedList = sorted(dictCheck.items(),
                                 key=lambda item: item[1], reverse=True)
             assert list(dictCheck.items()) == sortedList
 
-        def test_correct_type_L(self):  # L - longest
+        def test_correct_type_L(self, tags):  # L - longest
             assert type(tags.longest(6)).__name__ == 'list'
 
-        def test_correct_data_types_DBG(self):
+        def test_correct_data_types_DBG(self, tags):
             dict_check = tags.longest(6)
             flag = True
             for value in dict_check:
@@ -710,11 +709,11 @@ class TestClasses:
             assert flag
 
         # MWAL - most_words_and_longest
-        def test_correct_type_MWAL(self):
+        def test_correct_type_MWAL(self, tags):
             assert type(tags.most_words_and_longest(6)
                         ).__name__ == 'list'
 
-        def test_correct_data_types_MG(self):
+        def test_correct_data_types_MG(self, tags):
             dict_check = tags.most_words_and_longest(6)
             flag = True
             for value in dict_check:
@@ -722,10 +721,10 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_type_MP(self):  # MP - most_popular
+        def test_correct_type_MP(self, tags):  # MP - most_popular
             assert type(tags.most_popular(6)).__name__ == 'dict'
 
-        def test_correct_data_types_MP(self):
+        def test_correct_data_types_MP(self, tags):
             dict_check = tags.most_words(6)
             flag = True
             for key, value in dict_check.items():
@@ -733,16 +732,16 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_sort_dict_MP(self):
+        def test_correct_sort_dict_MP(self, tags):
             dictCheck = tags.most_words(6)
             sortedList = sorted(dictCheck.items(),
                                 key=lambda item: item[1], reverse=True)
             assert list(dictCheck.items()) == sortedList
 
-        def test_correct_type_TW(self, TagsClass):  # TW - tags_with
-            assert type(TagsClass.tags_with('funny')).__name__ == 'dict'
+        def test_correct_type_TW(self, tags):  # TW - tags_with
+            assert type(tags.tags_with('funny')).__name__ == 'dict'
 
-        def test_correct_data_types_TW(self):
+        def test_correct_data_types_TW(self, tags):
             dict_check = tags.tags_with('funny')
             flag = True
             for key, value in dict_check.items():
@@ -750,17 +749,17 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_sort_dict_TW(self):
+        def test_correct_sort_dict_TW(self, tags):
             dictCheck = tags.tags_with('funny')
             sortedList = sorted(dictCheck.items())
             assert list(dictCheck.items()) == sortedList
 
     class TestMovies:
 
-        def test_correct_type_DBR(self, ):  # DBR - dist_by_release
+        def test_correct_type_DBR(self, movies):  # DBR - dist_by_release
             assert type(movies.dist_by_release()).__name__ == 'dict'
 
-        def test_correct_data_types_DBR(self):
+        def test_correct_data_types_DBR(self, movies):
             dict_check = movies.dist_by_release()
             flag = True
             for key, value in dict_check.items():
@@ -768,16 +767,16 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_sort_dict_DBR(self):
+        def test_correct_sort_dict_DBR(self, movies):
             dictCheck = movies.dist_by_release()
             sortedList = sorted(dictCheck.items(),
                                 key=lambda item: item[1], reverse=True)
             assert list(dictCheck.items()) == sortedList
 
-        def test_correct_type_DBG(self):  # DBG - dist_by_genres
+        def test_correct_type_DBG(self, movies):  # DBG - dist_by_genres
             assert type(movies.dist_by_genres()).__name__ == 'dict'
 
-        def test_correct_data_types_DBG(self):
+        def test_correct_data_types_DBG(self, movies):
             dict_check = movies.dist_by_genres()
             flag = True
             for key, value in dict_check.items():
@@ -785,16 +784,16 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_sort_dict_DBG(self):
+        def test_correct_sort_dict_DBG(self, movies):
             dictCheck = movies.dist_by_genres()
             sortedList = sorted(dictCheck.items(),
                                 key=lambda item: item[1], reverse=True)
             assert list(dictCheck.items()) == sortedList
 
-        def test_correct_type_MG(self):  # MG- most_genres
+        def test_correct_type_MG(self, movies):  # MG- most_genres
             assert type(movies.most_genres(8)).__name__ == 'dict'
 
-        def test_correct_data_types_MG(self):
+        def test_correct_data_types_MG(self, movies):
             dict_check = movies.most_genres(8)
             flag = True
             for key, value in dict_check.items():
@@ -802,28 +801,28 @@ class TestClasses:
                     flag = False
             assert flag
 
-        def test_correct_sort_dict_MG(self):
+        def test_correct_sort_dict_MG(self, movies):
             dictCheck = movies.most_genres(8)
             sortedList = sorted(dictCheck.items(),
                                 key=lambda item: item[1], reverse=True)
             assert list(dictCheck.items()) == sortedList
 
     class TestRating:
-        def test_dist_by_year(ratings):
+        def test_dist_by_year(self, ratings):
             result = ratings.movies.dist_by_year()
             assert isinstance(result, dict)
             assert all(isinstance(year, int) and isinstance(count, int)
                        for year, count in result.items())
             assert sorted(result.keys()) == list(result.keys())
 
-        def test_dist_by_rating(ratings):
+        def test_dist_by_rating(self, ratings):
             result = ratings.movies.dist_by_rating()
             assert isinstance(result, dict)
             assert all(isinstance(rating, float) and isinstance(count, int)
                        for rating, count in result.items())
             assert sorted(result.keys()) == list(result.keys())
 
-        def test_top_by_num_of_ratings(ratings):
+        def test_top_by_num_of_ratings(self, ratings):
             result = ratings.movies.top_by_num_of_ratings(5)
             assert isinstance(result, dict)
             assert all(isinstance(movie, int) and isinstance(count, int)
@@ -831,7 +830,7 @@ class TestClasses:
             assert sorted(result.values(), reverse=True) == list(
                 result.values())
 
-        def test_top_by_ratings_avg(ratings):
+        def test_top_by_ratings_avg(self, ratings):
             result = ratings.movies.top_by_ratings(5, metric='average')
             assert isinstance(result, dict)
             assert all(isinstance(movie, int) and isinstance(score, float)
@@ -839,7 +838,7 @@ class TestClasses:
             assert sorted(result.values(), reverse=True) == list(
                 result.values())
 
-        def test_top_by_ratings_median(ratings):
+        def test_top_by_ratings_median(self, ratings):
             result = ratings.movies.top_by_ratings(5, metric='median')
             assert isinstance(result, dict)
             assert all(isinstance(movie, int) and isinstance(score, float)
@@ -847,7 +846,7 @@ class TestClasses:
             assert sorted(result.values(), reverse=True) == list(
                 result.values())
 
-        def test_top_controversial_movies(ratings):
+        def test_top_controversial_movies(self, ratings):
             result = ratings.movies.top_controversial(5)
             assert isinstance(result, dict)
             assert all(isinstance(movie, int) and isinstance(variance, float)
@@ -855,14 +854,14 @@ class TestClasses:
             assert sorted(result.values(), reverse=True) == list(
                 result.values())
 
-        def test_dist_by_users(ratings):
+        def test_dist_by_users(self, ratings):
             result = ratings.users.dist_by_users()
             assert isinstance(result, dict)
             assert all(isinstance(user, int) and isinstance(count, int)
                        for user, count in result.items())
             assert sorted(result.keys()) == list(result.keys())
 
-        def test_users_by_ratings_avg(ratings):
+        def test_users_by_ratings_avg(self, ratings):
             result = ratings.users.users_by_ratings(metric='average')
             assert isinstance(result, dict)
             assert all(isinstance(user, int) and isinstance(score, float)
@@ -870,7 +869,7 @@ class TestClasses:
             assert sorted(result.values(), reverse=True) == list(
                 result.values())
 
-        def test_users_by_ratings_median(ratings):
+        def test_users_by_ratings_median(self, ratings):
             result = ratings.users.users_by_ratings(metric='median')
             assert isinstance(result, dict)
             assert all(isinstance(user, int) and isinstance(score, float)
@@ -878,7 +877,7 @@ class TestClasses:
             assert sorted(result.values(), reverse=True) == list(
                 result.values())
 
-        def test_top_controversial_users(ratings):
+        def test_top_controversial_users(self, ratings):
             result = ratings.users.top_controversial(5)
             assert isinstance(result, dict)
             assert all(isinstance(user, int) and isinstance(variance, float)
