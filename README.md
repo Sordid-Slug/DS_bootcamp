@@ -147,7 +147,7 @@ The second is to choose the rows that you really need.
 
 In more detail:
 
-* put the database in the subfolder data in the root directory of the day
+* put the database in the subfolder data in the src directory of the day
 * create a connection to the database using the library sqlite3
 * get the schema of the table pageviews using pd.io.sql.read_sql and the query
 "PRAGMA table_info(pageviews);"
