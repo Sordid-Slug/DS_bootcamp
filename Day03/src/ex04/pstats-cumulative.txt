@@ -1,0 +1,15 @@
+Sat Mar  8 13:52:23 2025    profiling-http
+
+         790643 function calls (766803 primitive calls) in 10.656 seconds
+
+   Ordered by: cumulative time
+   List reduced from 2237 to 5 due to restriction <5>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    303/1    0.005    0.000   10.656   10.656 {built-in method builtins.exec}
+        1    0.000    0.000   10.656   10.656 financil.py:1(<module>)
+        1    0.000    0.000   10.473   10.473 financil.py:31(get_financial_data)
+        1    0.000    0.000   10.265   10.265 /home/artem/s21/DS_Bootcamp.Day03-1/src/jonso/lib/python3.10/site-packages/httpx/_api.py:174(get)
+        1    0.000    0.000   10.265   10.265 /home/artem/s21/DS_Bootcamp.Day03-1/src/jonso/lib/python3.10/site-packages/httpx/_api.py:39(request)
+
+
