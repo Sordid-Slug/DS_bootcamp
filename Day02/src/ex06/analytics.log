@@ -1,0 +1,470 @@
+2025-03-05 15:59:30 Initialized Research with file data.csv
+2025-03-05 15:59:30 Starting file_reader method
+2025-03-05 15:59:30 Open file data.csv
+2025-03-05 15:59:30 File read successfully
+2025-03-05 15:59:30 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 15:59:30 Starting counts method
+2025-03-05 15:59:30 Starting fractions method
+2025-03-05 15:59:30 Starting counts method
+2025-03-05 15:59:30 Starting counts method
+2025-03-05 16:48:01 Initialized Research with file data.csv
+2025-03-05 16:48:01 Starting file_reader method
+2025-03-05 16:48:01 Open file data.csv
+2025-03-05 16:48:01 File read successfully
+2025-03-05 16:48:01 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:48:01 Starting counts method
+2025-03-05 16:48:01 heads = 5, tails = 7
+2025-03-05 16:48:01 Starting fractions method
+2025-03-05 16:48:01 Starting counts method
+2025-03-05 16:48:01 heads = 5, tails = 7
+2025-03-05 16:48:01 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:48:01 starting predict_random_method with 5 num_predictions
+2025-03-05 16:48:01 starting method predict_last
+2025-03-05 16:48:01 starting predict_random_method with 5 num_predictions
+2025-03-05 16:48:01 Starting counts method
+2025-03-05 16:48:01 heads = 5, tails = 7
+2025-03-05 16:48:01 starting method save_file in report.txt
+2025-03-05 16:48:01 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:49:20 Initialized Research with file data.csv
+2025-03-05 16:49:20 Starting file_reader method
+2025-03-05 16:49:20 Open file data.csv
+2025-03-05 16:49:20 File read successfully
+2025-03-05 16:49:20 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:49:20 Starting counts method
+2025-03-05 16:49:20 heads = 5, tails = 7
+2025-03-05 16:49:20 Starting fractions method
+2025-03-05 16:49:20 Starting counts method
+2025-03-05 16:49:20 heads = 5, tails = 7
+2025-03-05 16:49:20 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:49:20 starting predict_random_method with 5 num_predictions
+2025-03-05 16:49:20 starting method predict_last
+2025-03-05 16:49:20 starting predict_random_method with 5 num_predictions
+2025-03-05 16:49:20 Starting counts method
+2025-03-05 16:49:20 heads = 5, tails = 7
+2025-03-05 16:49:20 starting method save_file in report.txt
+2025-03-05 16:49:20 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:49:48 Initialized Research with file data.csv
+2025-03-05 16:49:48 Starting file_reader method
+2025-03-05 16:49:48 Open file data.csv
+2025-03-05 16:49:48 File read successfully
+2025-03-05 16:49:48 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:49:48 Starting counts method
+2025-03-05 16:49:48 heads = 5, tails = 7
+2025-03-05 16:49:48 Starting fractions method
+2025-03-05 16:49:48 Starting counts method
+2025-03-05 16:49:48 heads = 5, tails = 7
+2025-03-05 16:49:48 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:49:48 starting predict_random_method with 5 num_predictions
+2025-03-05 16:49:48 starting method predict_last
+2025-03-05 16:49:48 starting predict_random_method with 5 num_predictions
+2025-03-05 16:49:48 Starting counts method
+2025-03-05 16:49:48 heads = 5, tails = 7
+2025-03-05 16:49:48 starting method save_file in report.txt
+2025-03-05 16:49:48 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:50:00 Initialized Research with file data.csv
+2025-03-05 16:50:00 Starting file_reader method
+2025-03-05 16:50:00 Open file data.csv
+2025-03-05 16:50:00 File read successfully
+2025-03-05 16:50:00 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:50:00 Starting counts method
+2025-03-05 16:50:00 heads = 5, tails = 7
+2025-03-05 16:50:00 Starting fractions method
+2025-03-05 16:50:00 Starting counts method
+2025-03-05 16:50:00 heads = 5, tails = 7
+2025-03-05 16:50:00 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:50:00 starting predict_random_method with 5 num_predictions
+2025-03-05 16:50:00 starting method predict_last
+2025-03-05 16:50:00 starting predict_random_method with 5 num_predictions
+2025-03-05 16:50:00 Starting counts method
+2025-03-05 16:50:00 heads = 5, tails = 7
+2025-03-05 16:50:00 starting method save_file in report.txt
+2025-03-05 16:50:00 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:50:51 Initialized Research with file data.csv
+2025-03-05 16:50:51 Starting file_reader method
+2025-03-05 16:50:51 Open file data.csv
+2025-03-05 16:50:51 File read successfully
+2025-03-05 16:50:51 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:50:51 Starting counts method
+2025-03-05 16:50:51 heads = 5, tails = 7
+2025-03-05 16:50:51 Starting fractions method
+2025-03-05 16:50:51 Starting counts method
+2025-03-05 16:50:51 heads = 5, tails = 7
+2025-03-05 16:50:51 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:50:51 starting predict_random_method with 5 num_predictions
+2025-03-05 16:50:51 starting method predict_last
+2025-03-05 16:50:51 starting predict_random_method with 5 num_predictions
+2025-03-05 16:50:51 Starting counts method
+2025-03-05 16:50:51 heads = 5, tails = 7
+2025-03-05 16:50:51 starting method save_file in report.txt
+2025-03-05 16:50:51 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:51:40 Initialized Research with file data.csv
+2025-03-05 16:51:40 Starting file_reader method
+2025-03-05 16:51:40 Open file data.csv
+2025-03-05 16:51:40 File read successfully
+2025-03-05 16:51:40 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:51:40 Starting counts method
+2025-03-05 16:51:40 heads = 5, tails = 7
+2025-03-05 16:51:40 Starting fractions method
+2025-03-05 16:51:40 Starting counts method
+2025-03-05 16:51:40 heads = 5, tails = 7
+2025-03-05 16:51:40 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:51:40 starting predict_random_method with 5 num_predictions
+2025-03-05 16:51:40 starting method predict_last
+2025-03-05 16:51:40 starting predict_random_method with 5 num_predictions
+2025-03-05 16:51:40 Starting counts method
+2025-03-05 16:51:40 heads = 5, tails = 7
+2025-03-05 16:51:40 starting method save_file in report.txt
+2025-03-05 16:51:40 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:52:05 Initialized Research with file data.csv
+2025-03-05 16:52:05 Starting file_reader method
+2025-03-05 16:52:05 Open file data.csv
+2025-03-05 16:52:05 File read successfully
+2025-03-05 16:52:05 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:52:05 Starting counts method
+2025-03-05 16:52:05 heads = 5, tails = 7
+2025-03-05 16:52:05 Starting fractions method
+2025-03-05 16:52:05 Starting counts method
+2025-03-05 16:52:05 heads = 5, tails = 7
+2025-03-05 16:52:05 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:52:05 starting predict_random_method with 5 num_predictions
+2025-03-05 16:52:05 starting method predict_last
+2025-03-05 16:52:05 starting predict_random_method with 5 num_predictions
+2025-03-05 16:52:05 Starting counts method
+2025-03-05 16:52:05 heads = 5, tails = 7
+2025-03-05 16:52:05 starting method save_file in report.txt
+2025-03-05 16:52:05 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:52:54 Initialized Research with file data.csv
+2025-03-05 16:52:54 Starting file_reader method
+2025-03-05 16:52:54 Open file data.csv
+2025-03-05 16:52:54 File read successfully
+2025-03-05 16:52:54 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:52:54 Starting counts method
+2025-03-05 16:52:54 heads = 5, tails = 7
+2025-03-05 16:52:54 Starting fractions method
+2025-03-05 16:52:54 Starting counts method
+2025-03-05 16:52:54 heads = 5, tails = 7
+2025-03-05 16:52:54 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:52:54 starting predict_random_method with 5 num_predictions
+2025-03-05 16:52:54 starting method predict_last
+2025-03-05 16:52:54 starting predict_random_method with 5 num_predictions
+2025-03-05 16:52:54 Starting counts method
+2025-03-05 16:52:54 heads = 5, tails = 7
+2025-03-05 16:52:54 starting method save_file in report.txt
+2025-03-05 16:52:54 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:54:00 Initialized Research with file data.csv
+2025-03-05 16:54:00 Starting file_reader method
+2025-03-05 16:54:00 Open file data.csv
+2025-03-05 16:54:00 File read successfully
+2025-03-05 16:54:00 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:54:00 Starting counts method
+2025-03-05 16:54:00 heads = 5, tails = 7
+2025-03-05 16:54:00 Starting fractions method
+2025-03-05 16:54:00 Starting counts method
+2025-03-05 16:54:00 heads = 5, tails = 7
+2025-03-05 16:54:00 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:54:00 starting predict_random_method with 5 num_predictions
+2025-03-05 16:54:00 starting method predict_last
+2025-03-05 16:54:00 starting predict_random_method with 5 num_predictions
+2025-03-05 16:54:00 Starting counts method
+2025-03-05 16:54:00 heads = 5, tails = 7
+2025-03-05 16:54:00 starting method save_file in report.txt
+2025-03-05 16:54:00 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 16:54:50 Initialized Research with file data.csv
+2025-03-05 16:54:50 Starting file_reader method
+2025-03-05 16:54:50 Open file data.csv
+2025-03-05 16:54:50 File read successfully
+2025-03-05 16:54:50 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 16:54:50 Starting counts method
+2025-03-05 16:54:50 heads = 5, tails = 7
+2025-03-05 16:54:50 Starting fractions method
+2025-03-05 16:54:50 Starting counts method
+2025-03-05 16:54:50 heads = 5, tails = 7
+2025-03-05 16:54:50 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 16:54:50 starting predict_random_method with 5 num_predictions
+2025-03-05 16:54:50 starting method predict_last
+2025-03-05 16:54:50 starting predict_random_method with 5 num_predictions
+2025-03-05 16:54:50 Starting counts method
+2025-03-05 16:54:50 heads = 5, tails = 7
+2025-03-05 16:54:50 starting method save_file in report.txt
+2025-03-05 16:54:50 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 17:07:07 Initialized Research with file data.csv
+2025-03-05 17:07:07 Starting file_reader method
+2025-03-05 17:07:07 Open file data.csv
+2025-03-05 17:07:07 File read successfully
+2025-03-05 17:07:07 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 17:07:07 Starting counts method
+2025-03-05 17:07:07 heads = 5, tails = 7
+2025-03-05 17:07:07 Starting fractions method
+2025-03-05 17:07:07 Starting counts method
+2025-03-05 17:07:07 heads = 5, tails = 7
+2025-03-05 17:07:07 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 17:07:07 starting predict_random_method with 5 num_predictions
+2025-03-05 17:07:07 starting method predict_last
+2025-03-05 17:07:07 starting predict_random_method with 5 num_predictions
+2025-03-05 17:07:07 Starting counts method
+2025-03-05 17:07:07 heads = 5, tails = 7
+2025-03-05 17:07:07 starting method save_file in report.txt
+2025-03-05 17:07:07 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 17:07:44 Initialized Research with file data.csv
+2025-03-05 17:07:44 Starting file_reader method
+2025-03-05 17:07:44 Open file data.csv
+2025-03-05 17:07:44 File read successfully
+2025-03-05 17:07:44 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 17:07:44 Starting counts method
+2025-03-05 17:07:44 heads = 5, tails = 7
+2025-03-05 17:07:44 Starting fractions method
+2025-03-05 17:07:44 Starting counts method
+2025-03-05 17:07:44 heads = 5, tails = 7
+2025-03-05 17:07:44 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 17:07:44 starting predict_random_method with 5 num_predictions
+2025-03-05 17:07:44 starting method predict_last
+2025-03-05 17:07:44 starting predict_random_method with 5 num_predictions
+2025-03-05 17:07:44 Starting counts method
+2025-03-05 17:07:44 heads = 5, tails = 7
+2025-03-05 17:07:44 starting method save_file in report.txt
+2025-03-05 17:07:44 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 17:07:49 Error sending message due to an error 400 Client Error: Bad Request for url: https://api.telegram.org/bot7820431039:AAEOO_uQlDz0mj_q8-MlXbV1IzPmObdvzEs/sendMessage
+2025-03-05 17:13:35 Initialized Research with file data.csv
+2025-03-05 17:13:35 Starting file_reader method
+2025-03-05 17:13:35 Open file data.csv
+2025-03-05 17:13:35 File read successfully
+2025-03-05 17:13:35 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 17:13:35 Starting counts method
+2025-03-05 17:13:35 heads = 5, tails = 7
+2025-03-05 17:13:35 Starting fractions method
+2025-03-05 17:13:35 Starting counts method
+2025-03-05 17:13:35 heads = 5, tails = 7
+2025-03-05 17:13:35 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 17:13:35 starting predict_random_method with 5 num_predictions
+2025-03-05 17:13:35 starting method predict_last
+2025-03-05 17:13:35 starting predict_random_method with 5 num_predictions
+2025-03-05 17:13:35 Starting counts method
+2025-03-05 17:13:35 heads = 5, tails = 7
+2025-03-05 17:13:35 starting method save_file in report.txt
+2025-03-05 17:13:35 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 17:13:51 Error sending message due to an error 400 Client Error: Bad Request for url: https://api.telegram.org/bot7820431039:AAEOO_uQlDz0mj_q8-MlXbV1IzPmObdvzEs/sendMessage
+2025-03-05 17:15:31 Initialized Research with file data.csv
+2025-03-05 17:15:31 Starting file_reader method
+2025-03-05 17:15:31 Open file data.csv
+2025-03-05 17:15:31 File read successfully
+2025-03-05 17:15:31 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 17:15:31 Starting counts method
+2025-03-05 17:15:31 heads = 5, tails = 7
+2025-03-05 17:15:31 Starting fractions method
+2025-03-05 17:15:31 Starting counts method
+2025-03-05 17:15:31 heads = 5, tails = 7
+2025-03-05 17:15:31 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 17:15:31 starting predict_random_method with 5 num_predictions
+2025-03-05 17:15:31 starting method predict_last
+2025-03-05 17:15:31 starting predict_random_method with 5 num_predictions
+2025-03-05 17:15:31 Starting counts method
+2025-03-05 17:15:31 heads = 5, tails = 7
+2025-03-05 17:15:31 starting method save_file in report.txt
+2025-03-05 17:15:31 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 17:19:37 Initialized Research with file data.csv
+2025-03-05 17:19:37 Starting file_reader method
+2025-03-05 17:19:37 Open file data.csv
+2025-03-05 17:19:37 File read successfully
+2025-03-05 17:19:37 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 17:19:37 Starting counts method
+2025-03-05 17:19:37 heads = 5, tails = 7
+2025-03-05 17:19:37 Starting fractions method
+2025-03-05 17:19:37 Starting counts method
+2025-03-05 17:19:37 heads = 5, tails = 7
+2025-03-05 17:19:37 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 17:19:37 starting predict_random_method with 5 num_predictions
+2025-03-05 17:19:37 starting method predict_last
+2025-03-05 17:19:37 starting predict_random_method with 5 num_predictions
+2025-03-05 17:19:37 Starting counts method
+2025-03-05 17:19:37 heads = 5, tails = 7
+2025-03-05 17:19:37 starting method save_file in report.txt
+2025-03-05 17:19:37 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 17:19:42 Sending message in telegram
+2025-03-05 19:39:16 Initialized Research with file data.csv
+2025-03-05 19:39:16 Starting file_reader method
+2025-03-05 19:39:16 Open file data.csv
+2025-03-05 19:39:16 File read successfully
+2025-03-05 19:39:16 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 19:39:16 Starting counts method
+2025-03-05 19:39:16 heads = 5, tails = 7
+2025-03-05 19:39:16 Starting fractions method
+2025-03-05 19:39:16 Starting counts method
+2025-03-05 19:39:16 heads = 5, tails = 7
+2025-03-05 19:39:16 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 19:39:16 starting predict_random_method with 5 num_predictions
+2025-03-05 19:39:16 starting method predict_last
+2025-03-05 19:39:16 starting predict_random_method with 5 num_predictions
+2025-03-05 19:39:16 Starting counts method
+2025-03-05 19:39:16 heads = 5, tails = 7
+2025-03-05 19:39:16 starting method save_file in report.txt
+2025-03-05 19:39:16 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 19:39:55 Initialized Research with file data.csv
+2025-03-05 19:39:55 Starting file_reader method
+2025-03-05 19:39:55 Open file data.csv
+2025-03-05 19:39:55 File read successfully
+2025-03-05 19:39:55 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 19:39:55 Starting counts method
+2025-03-05 19:39:55 heads = 5, tails = 7
+2025-03-05 19:39:55 Starting fractions method
+2025-03-05 19:39:55 Starting counts method
+2025-03-05 19:39:55 heads = 5, tails = 7
+2025-03-05 19:39:55 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 19:39:55 starting predict_random_method with 5 num_predictions
+2025-03-05 19:39:55 starting method predict_last
+2025-03-05 19:39:55 starting predict_random_method with 5 num_predictions
+2025-03-05 19:39:55 Starting counts method
+2025-03-05 19:39:55 heads = 5, tails = 7
+2025-03-05 19:39:55 starting method save_file in report.txt
+2025-03-05 19:39:55 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 19:39:56 Sending message in telegram
+2025-03-05 19:46:16 Initialized Research with file data.csv
+2025-03-05 19:46:16 Starting file_reader method
+2025-03-05 19:46:16 Open file data.csv
+2025-03-05 19:46:16 File read successfully
+2025-03-05 19:46:16 Initialized Calculations with data [[0, 1], [1, 0], [0, 1], [1, 0], [0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [0, 1], [1, 0], [0, 1]]
+2025-03-05 19:46:16 Starting counts method
+2025-03-05 19:46:16 heads = 5, tails = 7
+2025-03-05 19:46:16 Starting fractions method
+2025-03-05 19:46:16 Starting counts method
+2025-03-05 19:46:16 heads = 5, tails = 7
+2025-03-05 19:46:16 tails_percent = 58.333333333333336, heads_percent = 41.66666666666667
+2025-03-05 19:46:16 starting predict_random_method with 5 num_predictions
+2025-03-05 19:46:16 starting method predict_last
+2025-03-05 19:46:16 starting predict_random_method with 5 num_predictions
+2025-03-05 19:46:16 Starting counts method
+2025-03-05 19:46:16 heads = 5, tails = 7
+2025-03-05 19:46:16 starting method save_file in report.txt
+2025-03-05 19:46:16 Starting save data Report
+
+We have made 12 observations from tossing a coin: 7 of them were tails and 5 of
+them were heads. The probabilities are 41.67% and 58.33%, respectively. Our
+forecast is that in the next 5 observations we will have: 7 tail and 5 heads.
+2025-03-05 19:46:17 Sending message in telegram
+2025-03-05 19:46:22 Initialized Research with file data.csvdsad
+2025-03-05 19:46:22 Starting file_reader method
+2025-03-05 19:46:22 Error reading file: [Errno 2] No such file or directory: 'data.csvdsad'
+2025-03-05 19:47:17 Initialized Research with file data.csvdsad
+2025-03-05 19:47:17 Starting file_reader method
+2025-03-05 19:47:17 Error reading file: [Errno 2] No such file or directory: 'data.csvdsad'
+2025-03-05 19:48:42 Initialized Research with file data.csvdsad
+2025-03-05 19:48:42 Starting file_reader method
+2025-03-05 19:48:42 Error reading file: [Errno 2] No such file or directory: 'data.csvdsad'
+2025-03-05 19:49:39 Initialized Research with file data.csvdsad
+2025-03-05 19:49:39 Starting file_reader method
+2025-03-05 19:49:39 Error reading file: [Errno 2] No such file or directory: 'data.csvdsad'
+2025-03-05 19:50:17 Initialized Research with file data.csvdsad
+2025-03-05 19:50:17 Starting file_reader method
+2025-03-05 19:50:17 Error reading file: [Errno 2] No such file or directory: 'data.csvdsad'
+2025-03-05 19:50:39 Initialized Research with file data.csvdsad
+2025-03-05 19:50:39 Starting file_reader method
+2025-03-05 19:50:39 File not found: data.csvdsad
+2025-03-05 19:50:39 Error reading file: File not found
+2025-03-05 19:50:47 Initialized Research with file data.csvdsad
+2025-03-05 19:50:47 Starting file_reader method
+2025-03-05 19:50:47 File not found: data.csvdsad
+2025-03-05 19:50:47 Error reading file: File not found
+2025-03-05 19:50:59 Initialized Research with file data.csvdsad
+2025-03-05 19:50:59 Starting file_reader method
+2025-03-05 19:50:59 File not found: data.csvdsad
+2025-03-05 19:50:59 Error reading file: File not found
+2025-03-05 20:09:15 Initialized Research with file data.csvdsad
+2025-03-05 20:09:15 Starting file_reader method
+2025-03-05 20:09:15 File not found: data.csvdsad
+2025-03-05 20:09:15 Error reading file: File not found
+2025-03-05 20:10:12 Initialized Research with file data.csvdsad
+2025-03-05 20:10:12 Starting file_reader method
+2025-03-05 20:10:12 File not found: data.csvdsad
+2025-03-05 20:10:12 Error reading file: File not found
+2025-03-05 20:10:30 Initialized Research with file data.csvdsad
+2025-03-05 20:10:30 Starting file_reader method
+2025-03-05 20:10:30 File not found: data.csvdsad
+2025-03-05 20:10:30 Error reading file: File not found
+2025-03-05 20:12:57 Initialized Research with file data.csvdsad
+2025-03-05 20:12:57 Starting file_reader method
+2025-03-05 20:12:57 File not found: data.csvdsad
+2025-03-05 20:12:57 Error reading file: File not found
+2025-03-05 20:14:47 Initialized Research with file data.csvdsad
+2025-03-05 20:14:47 Starting file_reader method
+2025-03-05 20:14:47 File not found: data.csvdsad
+2025-03-05 20:14:47 Error reading file: File not found
+2025-03-05 20:15:30 Initialized Research with file data.csvdsad
+2025-03-05 20:15:30 Starting file_reader method
+2025-03-05 20:15:30 File not found: data.csvdsad
+2025-03-05 20:15:30 Error reading file: File not found
+2025-03-05 20:15:55 Initialized Research with file data.csvdsad
+2025-03-05 20:15:55 Starting file_reader method
+2025-03-05 20:15:55 File not found: data.csvdsad
+2025-03-05 20:15:55 Error reading file: File not found
+2025-03-05 20:16:05 Initialized Research with file data.csvdsad
+2025-03-05 20:16:05 Starting file_reader method
+2025-03-05 20:16:05 File not found: data.csvdsad
+2025-03-05 20:16:05 Error reading file: File not found
+2025-03-05 20:16:05 Sending message in telegram
